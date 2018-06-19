@@ -24,7 +24,7 @@ class QuotesSpider(scrapy.Spider):
                 'title':line.css('h1.entry-title::text').extract(),
                 'headings': line.css('h2::text').extract(),
                 'sub headings': line.css('h3::text').extract(),
-                'text': line.css('p.entry-details::text').extract(),
+                'text': line.css('p ::text').extract(),
 
 
 }
